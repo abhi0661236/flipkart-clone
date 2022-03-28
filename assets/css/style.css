@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+header{
+    width: 100%;
+    background-color: #2874f0;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 72%;
+    margin: 0px auto;
+    padding: 10px;
+}
+.brand-name{
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+}
+.explore-plus{
+    font-style: italic;
+    color: white;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -4px;
+    text-decoration: none;
+    
+}
+.explore-plus span{
+    color: #ffe500;
+}
+.explore-plus img{
+    width: 10px;
+    height: 10px;
+}
+
+/* brand information completed */
+
+/* search bar starts here */
+
+.search-bar{
+    align-items: center;
+    margin-left: -28px;
+    width: 55%;
+}
+#search-bar{
+    height: 36px;
+    border: none;
+    outline: none;
+    padding: 0px 16px;
+    width: 85.4%;
+}
+.search-bar button{
+    height: 36px;
+    width: 42.22px;
+    background-color: white;
+    margin-left: -4px;
+    border: none;
+    color: #2874f0;
+    outline: none;
+}
+
+/* search bar ends here */
+
+.usraccount a{
+
+    height: 31px;
+    color: #2874f0;
+    background-color: white;
+    font-size: 16px;
+    
+    padding: 5px 40px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* more stuff are styled here */
+.more-stuffs{
+    
+    color: white;
+    background-color: #2874f0;
+    font-size: 16px;
+    
+    /* padding: 5px 40px; */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+/* cart is styled here */
+.cart-container{
+    
+    color: white;
+    background-color: #2874f0;
+    font-size: 16px;
+    
+    /* padding: 5px 40px; */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* categories navigation  */
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 1px 1px 1px #d1cfcf;
+}
+.card{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 12px 8px;
+    font-size: 14px;
+}
+.card img{
+    margin: 0px auto;
+}
+.card a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.carousel { overflow: hidden; width: 100%; height: 280px; transform-style: preserve-3d;}
+.carousel-item img {
+    width: 100%;
+    height: 280px;
+}
+.carousel * {
+    box-sizing: border-box;
+  }
+.carousel-item {
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width: 99%;
+    margin: 10px auto;
+    z-index: 100;
+    transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carousel-item.initial, .carousel-item.active{
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+.carousel-item.prev, .carousel-item.next{
+    z-index: 800;
+}
+
+.carousel-item.prev{
+    transform: translateX(-100%); /* Move 'prev' item to the left */
+}
+
+.carousel-item.next{
+    transform: translateX(100%); /* Move 'next' item to the right */
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 47px;
+  height: 104px;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: none;
+}
+
+
+.carousel__button--prev {
+    left: 7px;;
+}
+  .carousel__button--next {
+    right:7px;
+  }
+
+
+  .carousel__button--prev::after,
+  .carousel__button--next::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+.carousel__button--next::after {
+left: 47%;
+transform: translate(-50%, -50%) rotate(-45deg);
+}
