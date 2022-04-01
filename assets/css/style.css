@@ -236,11 +236,12 @@ transform: translate(-50%, -50%) rotate(-45deg);
     height: 362px;
 }
 
-.product-carousel{
+.outerbox{
     width: 80%;
     background-color: white;
     height: inherit;
     padding: 4px 0px;
+    
 }
 .flpkart-offers{
     background-color: white;
@@ -283,4 +284,49 @@ transform: translate(-50%, -50%) rotate(-45deg);
     vertical-align: super;
     cursor: pointer;
     outline: none;
+}
+
+.product-carousel{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.prod-c-item{
+    box-sizing: border-box;
+    padding: 25px 15px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 195px;
+    max-height: 366px;
+    text-align: center;
+}
+.prod-c-item img{
+    max-width: 100%;
+    height: auto;
+}
+.prod-c-item div.prod-disc{
+    margin-top: 15px;
+}
+.prod-c-item .prod-title{
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.prod-c-item div.prod-disc p{
+    margin-top: 10px;
+}
+.prod_prev{
+    left: 0px;
+    display: none;
+
+}
+.prod_next{
+    right: 0px;
+
 }

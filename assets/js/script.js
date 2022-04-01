@@ -142,7 +142,7 @@ function initCarousel() {
 initCarousel();
 
 // to auto slidings
-setInterval(moveNext, 4t stt000);
+setInterval(moveNext, 4000);
 
 
 }
