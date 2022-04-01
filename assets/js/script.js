@@ -144,5 +144,40 @@ initCarousel();
 // to auto slidings
 setInterval(moveNext, 4000);
 
+// @abhi on 1/03/2022
+// adding a product carousel on flipkart-clone
+
+
+let prodNextBtn = document.querySelector('.prod_next');
+let elemToMove = prodNextBtn.parentElement.children[0];
+let prodPrevBtn = document.querySelector('.prod_prev');
+console.log(prodPrevBtn)
+// console.log(prodNextBtn.parentElement);
+
+prodNextBtn.addEventListener('click', () => {
+  console.log(elemToMove);
+  elemToMove.scroll({
+    top: 0,
+    left: 1000,
+    behavior: "smooth"
+  });
+
+  prodPrevBtn.style.visibility = 'visible';
+  prodNextBtn.style.visibility = 'hidden';
+  
+})
+
+
+prodPrevBtn.addEventListener('click', ()=>{
+  elemToMove.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+
+  prodPrevBtn.style.visibility = 'hidden';
+  prodNextBtn.style.visibility = 'visible';
+})
+
 
 }

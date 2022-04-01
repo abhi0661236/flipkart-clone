@@ -286,6 +286,11 @@ transform: translate(-50%, -50%) rotate(-45deg);
     outline: none;
 }
 
+
+.carousel-container{
+    position: relative;
+}
+
 .product-carousel{
     position: relative;
     display: flex;
@@ -323,7 +328,7 @@ transform: translate(-50%, -50%) rotate(-45deg);
 }
 .prod_prev{
     left: 0px;
-    display: none;
+    visibility: hidden;
 
 }
 .prod_next{
