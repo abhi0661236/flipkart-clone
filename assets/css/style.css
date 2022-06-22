@@ -1,9 +1,14 @@
+@import url(./colors.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0%;
     padding: 0%;
     font-family: 'Roboto', sans-serif;
 
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 section{
@@ -20,23 +25,24 @@ body {
 
 header{
     width: 100%;
-    background-color: #2874f0;
+    background-color: var(--theme-text);
 }
 
 .nav-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 72%;
+    width: 75%;
     margin: 0px auto;
     padding: 10px;
 }
 .brand-name{
     display: flex;
     flex-direction: column;
-    width: 8%;
+    
 }
 .explore-plus{
+    display: flex;
     font-style: italic;
     color: white;
     font-size: 11px;
@@ -58,9 +64,8 @@ header{
 /* search bar starts here */
 
 .search-bar{
-    align-items: center;
-    margin-left: -28px;
-    width: 55%;
+    width: 500px;
+    display: flex;
 }
 #search-bar{
     height: 36px;
@@ -75,16 +80,16 @@ header{
     background-color: white;
     margin-left: -4px;
     border: none;
-    color: #2874f0;
+    color: var(--theme-text);
     outline: none;
 }
 
 /* search bar ends here */
 
-.usraccount a{
+.usraccount .login-btn{
 
     height: 31px;
-    color: #2874f0;
+    color: var(--theme-text);
     background-color: white;
     font-size: 16px;
     
@@ -92,17 +97,83 @@ header{
     text-decoration: none;
     font-weight: 600;
 }
+.usraccount{
+    /* filter: drop-shadow(5px 6px 6px silver); */
+    z-index: 1000;
+    position: relative;
+    padding: 10px 0px;
+}
+.usraccount:hover .usracount-content{
+    display: block;
+}
+.usracount-content{
+    display: none;
+    width: 240px;
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    box-shadow: -2px 5px 10px var(--box-shadow);
+    /* margin-left: -4%; */
+    margin-top: 10px;
+    left: -50%;
+    
+    /* clip-path: polygon(50% 0%, 43% 5%, 0% 5%, 0% 100%, 100% 100%, 100% 5%, 57% 5%); */
+}
 
+
+/* put this class in a div element to make that a tiny triangle */
+.triangle{  
+    width: 40px;
+height: 20px;
+background-color: rgb(255, 255, 255);
+position: absolute;
+top: -16px;
+left: 50%;
+margin-left: -20px;
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.triangle-con{
+    background-color: pink;
+}
+.usracount-content .header{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+.usracount-content .header a{
+    color: var(--theme-text);
+}
+.usracount-content .header a:hover{
+    text-decoration: underline;
+}
+.usracount-content ul li{
+    padding: 15px 20px;
+    list-style-type: none;
+    border-top: 1px solid rgb(237, 237, 237);
+}
+.usracount-content ul li:hover{
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+}
 /* more stuff are styled here */
 .more-stuffs{
     
     color: white;
-    background-color: #2874f0;
+    background-color: var(--theme-text);
     font-size: 16px;
     
     /* padding: 5px 40px; */
     text-decoration: none;
     font-weight: 500;
+}
+.more-stuffs a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    
 }
 
 
@@ -117,6 +188,80 @@ header{
     text-decoration: none;
     font-weight: 500;
 }
+
+/* login box's styles */
+.modal{
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 70px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(98, 98, 98); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.684); /* Black w/ opacity */
+}
+.modal-content{
+    margin: auto;
+    display: flex;
+    width: 675px;
+    max-width: 700px;
+    height: 528px;
+    box-sizing: border-box;
+}
+.modal-content .desc-panel{
+    background-color: var(--theme-text);
+    width: 270px;
+    height: 528px;
+    background-image: url(../images/login_img.png);
+    background-repeat: no-repeat;
+    background-position: center 330px;
+}
+.content-login{
+    margin: 50px auto;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+}
+.content-login p{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(227, 227, 227);
+    margin-top: 15px;
+}
+.modal-content .form-panel{
+    background-color: rgb(255, 255, 255);
+    width: 405px;
+    height: 528px
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* end of login box's styles */
+
+
 
 /* categories navigation  */
 
@@ -190,7 +335,7 @@ header{
   background-color: #FFF;
   transform: translateY(-50%);
   cursor: pointer; 
-  z-index: 1001; /* Sit on top of everything */
+  z-index: 423; /* Sit on top of everything */
   border: none;
 }
 
@@ -334,4 +479,12 @@ transform: translate(-50%, -50%) rotate(-45deg);
 .prod_next{
     right: 0px;
 
+}
+
+.art{
+    background-color: pink;
+    width: 200px;
+    height: 300px;
+    clip-path: polygon(50% 0%, 43% 5%, 0% 5%, 0% 100%, 100% 100%, 100% 5%, 57% 5%);
+    margin: 20px auto;
 }

@@ -180,4 +180,26 @@ prodPrevBtn.addEventListener('click', ()=>{
 })
 
 
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// Get the modal
+let modal = document.getElementsByClassName('modal')[0];
+// Get the login btn
+let loginbtn = document.getElementsByClassName('login-btn')[0];
+// Get body
+let body = document.getElementsByTagName('body');
+console.log(body)
+// When the user clicks on login button, show the modal
+loginbtn.onclick = ()=>{
+  modal.style.display = 'block';
+  // body.style.overflow = 'hidden'; didnt work dont know why
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+} 
+
+
 }
