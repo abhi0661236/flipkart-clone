@@ -261,7 +261,14 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
 /* end of login box's styles */
 
-
+/* more items */
+  #more-items:hover{
+    cursor: pointer;
+  }
+  #more-items:hover .usracount-content{
+    display: block;
+  }
+/* end of more items */
 
 /* categories navigation  */
 
