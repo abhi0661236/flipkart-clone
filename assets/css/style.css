@@ -191,7 +191,7 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 
 /* login box's styles */
 .modal{
-    display: block; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
     padding-top: 70px; /* Location of the box */
